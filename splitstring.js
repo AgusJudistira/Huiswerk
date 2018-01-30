@@ -42,9 +42,10 @@ function series(start, limit, step) {
 	return seperateCommaSeperatedString(str,",");
 }
 
+/*
 for (var i = 0; i < program_output.length; i++) {
 	alert(program_output[i]);
-}
+}*/
 
 // DO NOT CHANGE ANYTHING BELOW THIS LINE!
 var program_output = series(0,10,2);
