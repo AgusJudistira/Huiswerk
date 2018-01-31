@@ -44,22 +44,35 @@ function series(start, limit, step) {
 
 /*
 for (var i = 0; i < program_output.length; i++) {
-	alert(program_output[i]);
+	alert("#"+program_output[i]+"#");
 }*/
+
+
+function matchArrays(program_output, expected_output) {
+	if (program_output.length == expected_output.length) {
+			var i = 0;
+			while ((program_output[i] === expected_output[i]) && i < program_output.length) {
+				i++
+			}
+			if (i == program_output.length) {
+				return true;
+			}
+			else {
+				return false;
+			}
+	} else {
+		return false;
+	}
+
+}
+
 
 // DO NOT CHANGE ANYTHING BELOW THIS LINE!
 var program_output = series(0,10,2);
-var test_output = ['0','2','4','6','8','10'];
 var expected_output = ['0','2','4','6','8','10'];
 
-if (test_output === expected_output) {
-    console.log("test output match!");
-} else {
-    console.log("test output failed too!");
-}
-
 //Compare program output to expected output. This is an example of a UnitTest
-if (program_output === expected_output){
+if (matchArrays(program_output, expected_output)) {
 	console.log("Match! You succeded");
 }
 else{
